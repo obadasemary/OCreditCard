@@ -15,13 +15,62 @@ struct CreditCardFront: View {
     
     var body: some View {
         
-        VStack {
-            Text("")
+        VStack(alignment: .leading) {
+            HStack(alignment: .top) {
+                
+                Image(systemName: "checkmark.circle.fill")
+                    .foregroundColor(.white)
+                
+                Spacer()
+                
+                Text("VISA")
+                    .foregroundColor(.white)
+                    .font(.system(size: 24))
+                    .fontWeight(.bold)
+            }
+            
+            Spacer()
+            
+            Text("**** **** **** 2578")
                 .foregroundColor(.white)
+                .font(.system(size: 32))
+            
+            Spacer()
+            
+            HStack {
+                
+                VStack(alignment: .leading) {
+                    Text("CARD HOLDER")
+                        .font(.caption)
+                        .fontWeight(.bold)
+                        .foregroundColor(.gray)
+                    
+                    Text("ABDELRAHMAN MOHAMED")
+                        .font(.caption)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                }
+                
+                Spacer()
+                
+                VStack {
+                    
+                    Text("EXPIRES")
+                        .font(.caption)
+                        .fontWeight(.bold)
+                        .foregroundColor(.gray)
+                    
+                    Text("07/25")
+                        .font(.caption)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                }
+            }
         }
         .frame(width: 300, height: 200, alignment: .center)
+        .padding()
         .background(
-            LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue]), startPoint: .leading, endPoint: .trailing)
+            LinearGradient(gradient: Gradient(colors: [.red, Color.blue]), startPoint: .topLeading, endPoint: .bottomLeading)
         )
         .cornerRadius(10)
     }
