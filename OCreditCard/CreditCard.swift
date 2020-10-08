@@ -7,14 +7,20 @@
 
 import SwiftUI
 
-struct CreditCard: View {
+struct CreditCard<Content>: View where Content: View {
     
     // MARK: - PROPERTIES
+    
+    var content: () -> Content
     
     // MARK: - BODY
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            content()
+//            CreditCardFront()
+//            CreditCardBack()
+        }
     }
 }
 
@@ -22,6 +28,6 @@ struct CreditCard: View {
 
 struct CreditCard_Previews: PreviewProvider {
     static var previews: some View {
-        CreditCard()
+        CreditCard<CreditCardFront>(content: { CreditCardFront() })
     }
 }
