@@ -18,8 +18,6 @@ struct CreditCard<Content>: View where Content: View {
     var body: some View {
         VStack {
             content()
-//            CreditCardFront()
-//            CreditCardBack()
         }
     }
 }
