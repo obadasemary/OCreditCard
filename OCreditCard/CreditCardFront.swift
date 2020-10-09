@@ -11,6 +11,9 @@ struct CreditCardFront: View {
     
     // MARK: - PROPERTIES
     
+    let name: String
+    let expires: String
+    
     // MARK: - BODY
     
     var body: some View {
@@ -45,7 +48,7 @@ struct CreditCardFront: View {
                         .fontWeight(.bold)
                         .foregroundColor(.gray)
                     
-                    Text("ABDELRAHMAN MOHAMED")
+                    Text(name)
                         .font(.caption)
                         .fontWeight(.bold)
                         .foregroundColor(.white)
@@ -60,7 +63,7 @@ struct CreditCardFront: View {
                         .fontWeight(.bold)
                         .foregroundColor(.gray)
                     
-                    Text("07/25")
+                    Text(expires)
                         .font(.caption)
                         .fontWeight(.bold)
                         .foregroundColor(.white)
@@ -80,6 +83,6 @@ struct CreditCardFront: View {
 
 struct CreditCardFront_Previews: PreviewProvider {
     static var previews: some View {
-        CreditCardFront()
+        CreditCardFront(name: "ABDELRAHMAN MOHAMED", expires: "07/25")
     }
 }
