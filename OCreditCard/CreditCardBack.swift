@@ -11,10 +11,15 @@ struct CreditCardBack: View {
     
     // MARK: - PROPERTIES
     
+    let cvv: String
+    
     // MARK: - BODY
     
     var body: some View {
         VStack {
+            
+            Spacer()
+            
             Rectangle()
                 .frame(maxWidth: .infinity, maxHeight: 20)
                 .padding([.top])
@@ -22,7 +27,7 @@ struct CreditCardBack: View {
             Spacer()
             
             HStack {
-                Text("583")
+                Text(cvv)
                     .foregroundColor(.black)
                     .font(.caption)
                     .fontWeight(.bold)
@@ -52,6 +57,6 @@ struct CreditCardBack: View {
 
 struct CreditCardBack_Previews: PreviewProvider {
     static var previews: some View {
-        CreditCardBack()
+        CreditCardBack(cvv: "529")
     }
 }
