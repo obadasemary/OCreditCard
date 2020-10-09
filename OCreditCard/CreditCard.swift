@@ -26,6 +26,6 @@ struct CreditCard<Content>: View where Content: View {
 
 struct CreditCard_Previews: PreviewProvider {
     static var previews: some View {
-        CreditCard<CreditCardFront>(content: { CreditCardFront() })
+        CreditCard<CreditCardFront>(content: { CreditCardFront(name: "Obada", expires: "07/20") })
     }
 }
